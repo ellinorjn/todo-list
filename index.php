@@ -7,21 +7,26 @@
 <body>
   
   <form action="index.php" method="POST">
+    <label>Your ToDo:</label><input type="text" name="title">
      <label>Username:</label><input type="text" name="createdBy">
-     <label>Your ToDo:</label><input type="text" name="title">
      <input type="submit" name="add" value="Add">      
   </form>
+  
+  
   
  
     
    <?php
+    
+    
+    
         require 'database.php';
         require 'fetch_added.php';
     
     $statement = $pdo->prepare("SELECT title, completed FROM todo");
     $statement->execute();
     $variabel = $statement->fetchAll(PDO::FETCH_ASSOC);
-    var_dump($variabel);
+    //var_dump($variabel);
     echo '<br/>';
     
     foreach($variabel as $test){
@@ -29,16 +34,8 @@
         
     }
     
-    
-    
-    $statement2 = $pdo->prepare("SELECT title FROM todo WHERE title = :title");
-    $statement2->execute(array(":title" => $_POST["add"]));
-    $testar = $statement2->fetchAll(PDO::FETCH_ASSOC);
-    
-    var_dump($testar);
-    var_dump($_POST);
-    
-    
+    //var_dump($testar);
+    //var_dump($_POST);
     
     ?>
     
@@ -48,4 +45,3 @@
 </body>
 </html>
 
-<!--- Test --->
