@@ -1,0 +1,88 @@
+body{
+    background: #eaeaea;
+}
+
+h1{
+    font-family:'Indie Flower', cursive;
+    text-decoration: underline;
+    font-size: 3em;
+    text-align: center;
+}
+
+h3{
+    font-family:'Indie Flower', cursive;
+    text-decoration: underline;
+    font-size: 1.5em;
+}
+
+.clear{
+    clear:both;
+}
+
+ol{
+    margin-left: 100px;
+}
+
+ul{
+    margin-left: 100px;
+    text-align: left;
+}
+
+li{
+    font-family:'Indie Flower', cursive;
+    font-size: 1.5em;
+}
+.todo{
+    background: white;
+    margin: 0px auto; 
+    min-height: 100px;
+    width: 50%;
+    box-shadow: 5px 5px 5px 2px #888888;
+    
+}
+
+.addNew{
+    background: white;
+    margin: 0px auto; 
+    text-align: center;
+    width: 50%;
+    box-shadow: 5px 5px 5px 2px #888888;
+    padding-bottom: 50px;
+    padding-top: 20px;
+}
+
+.completed{
+    background: white;
+    margin: 0px auto; 
+    text-align: center;
+    width: 50%;
+    box-shadow: 5px 5px 5px 2px #888888;
+    
+}
+
+.completed .fa-times{
+    margin-right: 150px;
+}
+
+.fa-check{
+    color: green;
+    float:right;
+    margin-right: 100px;
+}
+
+.fa-times{
+    color: red;
+    float: right;
+    margin-right: 20px;
+    
+}
+
+input[type="text"]{
+    margin-bottom: 10px;
+}
+
+input[type="text"]::placeholder{
+    font-family: 'Indie Flower', cursive; 
+    font-size: 1.5em;
+    text-align: center;
+}

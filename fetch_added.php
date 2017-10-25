@@ -1,5 +1,9 @@
 <?php
-   $title = $_POST['title'];
+
+    header('location: index.php'); 
+    require 'database.php';
+
+    $title = $_POST['title'];
     $username = $_POST['createdBy'];
     
     
@@ -9,19 +13,4 @@
     $newAdded = $statementAdd->fetchAll(PDO::FETCH_ASSOC);
     
     
-    foreach ($newAdded as $newToDo){
-        if(isset($_POST['add']) && !empty($title)
-                                && !empty($username)){
-        echo $newToDo ['title'] . '<br/>';
-        }else{
-            echo ' ';
-        }
-    }
-    
-    
-    if(isset($_POST['add']) && !empty($title)
-                            && !empty($username)){
-        echo "Ny tillagd!";
-    }else{
-        ' ';
-    }
+   
