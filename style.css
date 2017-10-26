@@ -1,5 +1,6 @@
 body{
     background: #eaeaea;
+    margin: 0px;
 }
 
 h1{
@@ -84,5 +85,19 @@ input[type="text"]{
 input[type="text"]::placeholder{
     font-family: 'Indie Flower', cursive; 
     font-size: 1.5em;
+    text-align: center;
+}
+
+footer{
+    background: white;
+    height: 50px;
+    text-align: center;
+}
+footer p{
+    margin: 0px auto;
+    padding: 15px;
+}
+
+.message{
     text-align: center;
 }

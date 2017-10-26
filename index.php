@@ -9,42 +9,48 @@
 <!--- LISTA MED TO DO'S --->
 <div class="todo">
   <h1>Things To Do!</h1>
-       <?php
+      
+      
+<div class="message">        
+<?php
+      
+    if(isset($_GET['message'])){
+        echo'You have added a new ToDo!';
+    }else{
+        echo '';
+    }
+?>
+</div>    
+<?php
             require 'database.php';
             require 'fetch_added_index.php';
+            //require 'edit_todo.php';
         ?>
     
 <!--- ORDERED LIST --->
     <ol>
         <?php for($i = 0; $i < count($addedToDo); $i++): ?> 
             <li>
-                <?php echo $addedToDo[$i]['title'] ?>
+                <?php echo $addedToDo[$i]['title']; ?>
                 <a href="completed.php?id=<?= $addedToDo[$i]['id'] ?>"><i class="fa fa-check" aria-hidden="true"></i></a>
 
                 <a href="fetch_deleted_index.php?id=<?= $addedToDo[$i]['id'] ?>"><i class="fa fa-times" aria-hidden="true"></i></a>
-
+                
+                
+                
+                <form action="edit_todo.php" method="POST">
+                    <input type="text" name="edit" placeholder="Edit your ToDo"> 
+                    <input type="submit" name="add" value="Edit">
+                </form>
+                
+                <!---<a href ="edit_todo.php?id=<?= $addedToDo[$i]['id']?>"><i class="fa fa-pencil" aria-hidden="true"></i></a> --->
                 <?php '<br/>'; ?>
             </li> 
         <?php endfor; ?>
+    
     </ol>
 <!--- END ORDERED LIST --->
-    
-    
-    
-    <?php
-    
-      
-    /*
-    if(isset($_GET['added']) && !empty($title)
-                            && !empty($username)){
-        echo "You have added a new ToDo!";
-    }else{
-        ' ';
-    }
-    
-    */
-    ?>
-    
+
 </div> <!--- End div "todo" --->
 <div class="clear"></div>    
     
@@ -81,8 +87,11 @@
         </ul>
     </div>
     
-    <div class="clear"></div>
-    
+    <div class="clear"></div>    
+       
 </body>
 </html>
+<?PHP
 
+require 'footer.html';
+?>
