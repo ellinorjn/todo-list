@@ -65,7 +65,7 @@
     
 <!--- LISTA PÅ DE TODO'S SOM ÄR KLARA --->    
 <div class="completed">
-    <h3>Completed:</h3>
+    <h3>Completed To Do's:</h3>
    
  <?PHP require'completed_loop.php'; ?>
       

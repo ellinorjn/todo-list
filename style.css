@@ -14,10 +14,7 @@ h3{
     font-family:'Indie Flower', cursive;
     text-decoration: underline;
     font-size: 1.5em;
-}
-
-.clear{
-    clear:both;
+    padding: 20px;
 }
 
 ol{
@@ -58,7 +55,7 @@ li{
     text-align: center;
     width: 50%;
     box-shadow: 5px 5px 5px 2px #888888;
-    min-height: 150px;x
+    min-height: 150px;
     
 }
 
@@ -89,22 +86,17 @@ input[type="text"]::placeholder{
     text-align: center;
 }
 
-footer{
-    background: white;
-    height: 50px;
-    text-align: center;
-    width: 50%;
-    margin: 0px auto;
-}
-footer p{
-    margin: 0px auto;
-    font-size: 1.2em;
-}
-
 .message{
     text-align: center;
 }
 
-.todo-list{
+footer{
+    background: white;
+    height: 50px;
+    text-align: center;
+}
+
+footer p{
     margin: 0px auto;
+    font-size: 1.2em;
 }
