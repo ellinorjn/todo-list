@@ -5,14 +5,3 @@ require 'database.php';
     $statement->execute();
     $addedToDo = $statement->fetchAll(PDO::FETCH_ASSOC);
 
-/*
-    $test = "det gick bra";
-    if($addedToDo){
-      echo $test;  
-    
-    }else{
-        echo 'lägg till';
-    }
-  
-
-*/

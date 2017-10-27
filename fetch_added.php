@@ -1,6 +1,6 @@
 <?php
 
-    header('location: index.php?message'); 
+    header('location: index.php?message=You have added a new To Do!'); 
     require 'database.php';
 
     $title = $_POST['title'];

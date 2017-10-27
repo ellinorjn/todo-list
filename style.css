@@ -36,7 +36,7 @@ li{
 .todo{
     background: white;
     margin: 0px auto; 
-    min-height: 100px;
+    min-height: 150px;
     width: 50%;
     box-shadow: 5px 5px 5px 2px #888888;
     
@@ -58,6 +58,7 @@ li{
     text-align: center;
     width: 50%;
     box-shadow: 5px 5px 5px 2px #888888;
+    min-height: 150px;x
     
 }
 
@@ -92,12 +93,18 @@ footer{
     background: white;
     height: 50px;
     text-align: center;
+    width: 50%;
+    margin: 0px auto;
 }
 footer p{
     margin: 0px auto;
-    padding: 15px;
+    font-size: 1.2em;
 }
 
 .message{
     text-align: center;
+}
+
+.todo-list{
+    margin: 0px auto;
 }

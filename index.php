@@ -1,10 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-
 <?php 
-  require 'head.html';  
+    require 'head.html';
+    require 'database.php';
+    require 'fetch_added_index.php';
 ?>
-<body>
   
 <!--- LISTA MED TO DO'S --->
 <div class="todo">
@@ -15,18 +13,13 @@
 <?php
       
     if(isset($_GET['message'])){
-        echo'You have added a new ToDo!';
+        echo $_GET['message'];
     }else{
-        echo '';
+        echo "You have not added any new To Do's";
     }
 ?>
-</div>    
-<?php
-            require 'database.php';
-            require 'fetch_added_index.php';
-            //require 'edit_todo.php';
-        ?>
-    
+</div> 
+
 <!--- ORDERED LIST --->
     <ol>
         <?php for($i = 0; $i < count($addedToDo); $i++): ?> 
@@ -38,16 +31,15 @@
                 
                 
                 
-                <form action="edit_todo.php" method="POST">
+                <form action="edit_todo.php?id=<?= $addedToDo[$i]['id'] ?>" method="POST">
                     <input type="text" name="edit" placeholder="Edit your ToDo"> 
                     <input type="submit" name="add" value="Edit">
                 </form>
                 
-                <!---<a href ="edit_todo.php?id=<?= $addedToDo[$i]['id']?>"><i class="fa fa-pencil" aria-hidden="true"></i></a> --->
+               
                 <?php '<br/>'; ?>
             </li> 
         <?php endfor; ?>
-    
     </ol>
 <!--- END ORDERED LIST --->
 
@@ -72,8 +64,8 @@
     
     
 <!--- LISTA PÅ DE TODO'S SOM ÄR KLARA --->    
-    <div class="completed">
-        <h3>Completed:</h3>
+<div class="completed">
+    <h3>Completed:</h3>
    
  <?PHP require'completed_loop.php'; ?>
       
@@ -85,13 +77,12 @@
                 </li>
             <?php endfor; ?>
         </ul>
-    </div>
+ </div>
     
-    <div class="clear"></div>    
+<div class="clear"></div>    
        
-</body>
-</html>
-<?PHP
 
+
+<?PHP
 require 'footer.html';
 ?>

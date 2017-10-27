@@ -1,11 +1,11 @@
 <?PHP
 
 require 'database.php';
+header('location: index.php');
 
 
-    $id= $_POST['add'];
-    $edit= $_POST['add'];
+    $id= $_GET['id'];
+    $edit= $_POST['edit'];
 
-    $statement=$pdo->prepare("SELECT title AS edit=$edit from todo WHERE id=$id"); 
+    $statement=$pdo->prepare("UPDATE todo SET title='$edit' WHERE id=$id"); 
     $statement->execute();
-    
